@@ -11,6 +11,54 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
+h1, h2 {
+    color: rgba(46, 47, 66, 1);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+button {
+  height: 40px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(78, 117, 255, 1);
+}
+
+button:hover {
+  background-color: rgba(108, 140, 255, 1);
+}
+
+input {
+  border: 1px solid rgba(128, 128, 128, 1);
+}
+
+input:hover {
+  border-color: rgba(0, 0, 0, 1);
+}
+
+input:active, input:focus {
+  border: 1px solid rgba(128, 128, 128, 1);
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 body {
   margin: 16px;
   font-family: "Montserrat", sans-serif;
@@ -21,8 +69,42 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 
+ul#categories {
+  list-style: none;
+  width: 392px;
+}
+
+ul#categories > li {
+  list-style: none;
+  background-color: rgba(246, 246, 254, 1);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+ul#categories > li li {
+  padding: 8px 16px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+}
+
+ul#categories>li li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+ul#categories h2 {
+  margin-bottom: 16px;
+}
+
+ul#categories li {
+  list-style: none;
+}
 
 .container-gallery {
   width: 1128px;
@@ -51,12 +133,111 @@ body {
     object-position: center center;
 }
 
+/* #region task-3 */
+
+#name-input {
+  width: 360px;
+  padding: 8px 0 8px 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+}
+
+#name-input::placeholder {
+  color: rgba(46, 47, 66, 1);
+}
+
+/* #endregion task-3 */
+
+/* #region task-4 */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  gap: 8px;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+}
+
+.login-form label input {
+  height: 40px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+}
+
+.login-form button {
+  margin-top: 8px;
+  width: 86px;
+}
+
+
+/* #endregion task-4 */
+
+
+/* #region task-5 */
+
+.widget {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.widget button {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* #endregion task-5 */
+
+/* #region task-6 */
+
 #boxes {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  row-gap: 32px;
 }
 
 div.in-box {
   display: block;
 }
+
+#controls {
+  margin-bottom: 32px;
+  display: flex;
+  gap: 16px;
+}
+
+#controls input {
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#controls button {
+  width: 120px;
+}
+
+#controls button[data-destroy] {
+  background-color: rgba(255, 78, 78, 1);
+}
+
+#controls button[data-destroy]:hover {
+  background-color: rgba(255, 112, 112, 1);
+}
+
+/* #endregion task-6 */

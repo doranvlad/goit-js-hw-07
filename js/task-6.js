@@ -1,14 +1,8 @@
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215)
-//     .toString(16)
-//     .padStart(6, 0)}`;
-// }
-
-// rgb random function
-
-function getRandomRgbColor() {
-  return Math.floor(Math.random() * 255);
-  }
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
 
 // input
 
@@ -50,7 +44,7 @@ function onBoxClick(event) {
       newBox.classList.add('new-box')
       newBox.style.width = `${start}px`
       newBox.style.height = `${start}px`
-      newBox.style.backgroundColor = `rgb(${getRandomRgbColor()}, ${getRandomRgbColor()}, ${getRandomRgbColor()}, 0.6)`
+      newBox.style.backgroundColor = getRandomHexColor();
       boxesList.push(newBox)
       start += 10;
     }
@@ -59,6 +53,7 @@ function onBoxClick(event) {
   }
 
   divHolder.append(...boxesList)
+  inputValue = -1;
 }
 
 // button Destroy
@@ -72,3 +67,8 @@ function onBoxDestClick(event) {
   }
  input.value = ''
 };
+
+// body background-color
+
+const body = document.querySelector('body')
+body.style.backgroundColor = 'rgb(246, 246, 254, 1)';
