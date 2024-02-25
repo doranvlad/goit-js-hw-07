@@ -10,8 +10,8 @@ function onFormSbmt(event) {
     const email = form.elements.email.value;
     const password = form.elements.password.value;
 
-    if (email === '' || password === '') {
-        alert('All form fields must be filled in');
+    if (email.trim() === '' || password.trim() === '') {
+        return alert('All form fields must be filled in');
     };
 
     const objForConsole = {
